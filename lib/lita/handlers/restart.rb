@@ -4,14 +4,14 @@ module Lita
     # Die handler
     class Die < Handler
       route(
-        /^die$/, :die,
+        /^restart$/, :restart,
         command: true, restrict_to: :admins,
         help: {
-          'die' => 'shuts down while sobbing, you monster.'
+          'restart' => 'recycle this robot.'
         })
 
-      def die(response)
-        response.reply(render_template('dies'))
+      def restart(response)
+        response.reply(render_template('restart'))
         robot.shut_down
       end
     end

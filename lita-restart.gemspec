@@ -1,11 +1,11 @@
 Gem::Specification.new do |spec|
-  spec.name          = 'lita-die'
-  spec.version       = '1.0.1'
-  spec.authors       = ['Christian Höltje']
-  spec.email         = ['docwhat@gerf.org']
-  spec.description   = "Adds 'die' command"
-  spec.summary       = "Adds a 'die' command accessable only by admins."
-  spec.homepage      = 'https://github.com/docwhat/lita-die'
+  spec.name          = 'lita-restart'
+  spec.version       = '1.0.2'
+  spec.authors       = ['Greg Kitson', 'Christian Höltje']
+  spec.email         = ['lita-restart@gregkitson.com']
+  spec.description   = "Adds 'restart' command"
+  spec.summary       = "Adds a 'restart' command accessable only by admins."
+  spec.homepage      = 'https://github.com/awaxa/lita-restart'
   spec.license       = 'MIT'
   spec.metadata      = { 'lita_plugin_type' => 'handler' }
 
