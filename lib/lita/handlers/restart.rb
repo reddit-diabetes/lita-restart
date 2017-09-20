@@ -3,11 +3,16 @@ module Lita
   module Handlers
     # Die handler
     class Die < Handler
+      desc = 'recycle this robot.'
       route(
-        /^restart$/, :restart,
+        /^bounce|restart|si+t|stay|roll over$/i, :restart,
         command: true, restrict_to: :admins,
         help: {
-          'restart' => 'recycle this robot.'
+          'bounce' => desc,
+          'restart' => desc,
+          'sit' => desc,
+          'stay' => desc,
+          'roll over' => desc,
         })
 
       def restart(response)
