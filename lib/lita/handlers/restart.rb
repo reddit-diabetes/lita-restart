@@ -5,14 +5,16 @@ module Lita
     class Die < Handler
       desc = 'recycle this robot.'
       route(
-        /^bounce|restart|si+t|stay|roll over$/i, :restart,
+        /^bounce|restart|si+t(down)?|stay|roll over|fuck off$/i, :restart,
         command: true, restrict_to: :admins,
         help: {
           'bounce' => desc,
           'restart' => desc,
           'sit' => desc,
+          'sit down' => desc,
           'stay' => desc,
           'roll over' => desc,
+          'fuck off' => desc
         })
 
       def restart(response)
